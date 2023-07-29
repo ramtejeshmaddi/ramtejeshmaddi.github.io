@@ -1,6 +1,6 @@
 let elements = document.querySelectorAll('.hidden');
 let options = {
-    threshold: 0.5
+    threshold: 0.3
 }
 let lastScrollVal = window.scrollY;
 let observer = new IntersectionObserver(entries => {
