@@ -1,0 +1,79 @@
+/* Style for every element */
+section{
+    min-height: 100vh;
+    padding: 0vh 5vw;
+    scroll-snap-align : start;
+    background-color: black;
+    color: white;
+}
+img{
+    max-width: 50vw;
+    
+}
+.wrapper{
+    scroll-snap-type: y mandatory;
+}
+
+
+/* Resume section */
+.resume{
+    display: grid;
+    align-items: center;
+}
+
+
+/* Projects Section */
+.projects>div{
+    display: flex;
+    align-items: center;
+    margin-top: 3vh;
+    
+}
+.paraRight>p{
+    margin-left: 3vw;
+}
+.paraLeft>p{
+    margin-right: 3vw;
+}
+.hidden{
+    opacity: 0;
+    transition: all 1s;
+    padding: 0vh 0vw;
+}
+.shown{
+    opacity: 1;  
+    transition: all 1s;
+    padding: 0vh 5vw;
+}
+
+/* Contact Page */
+@keyframes iconEnlargement {
+    to{
+        width: 4vw;
+    }
+}
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.playIconAnimation > svg{
+    background-color: red;
+    width: 1vw;
+    border: 2px solid black;
+    border-radius: 50%;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-name: iconEnlargement;
+    
+}
+.contact > svg:nth-child(1){
+    animation-delay: 0.8s;
+    
+}
+.contact > svg:nth-child(2){
+    animation-delay: 0.9s;
+}
+.contact > svg:nth-child(3){
+    animation-delay: 1.1s;
+}
