@@ -3,17 +3,14 @@ body{
     
     height: 100vh;
     margin: 0%;
-    background-image: url("https://pixabay.com/get/gc77050a85d321e1d4f80cdd94bff9c9ceb9fe9d8415281380dc866234e18f7b314f6f2b5041db8573b97a4440342eacf4c5e01527798c7c3e4b5eca8854f82f2_1280.jpg");
+    background-image:url("/assets/background.jpg");
     background-size: cover;
-}
-html{
-    -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 main{
     overflow-x: hidden;
 }
 .container{
-    overflow: scroll;
+    overflow: auto;
     height: 100vh;
     scroll-snap-type: y mandatory;
     
@@ -49,6 +46,7 @@ img{
 .mySelf>img{
     transform:rotate(-10deg);
 }
+
 
 
 /* Projects Section */
