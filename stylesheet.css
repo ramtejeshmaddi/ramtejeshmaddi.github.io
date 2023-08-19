@@ -46,6 +46,9 @@ img{
 .mySelf>img{
     transform:rotate(-10deg);
 }
+#greeting{
+    text-decoration: underline;
+}
 
 
 
