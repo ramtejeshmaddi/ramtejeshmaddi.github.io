@@ -1,24 +1,53 @@
 /* Style for every element */
+body{
+    
+    height: 100vh;
+    margin: 0%;
+    background-image: url("https://pixabay.com/get/gc77050a85d321e1d4f80cdd94bff9c9ceb9fe9d8415281380dc866234e18f7b314f6f2b5041db8573b97a4440342eacf4c5e01527798c7c3e4b5eca8854f82f2_1280.jpg");
+    background-size: cover;
+}
+html{
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+main{
+    overflow-x: hidden;
+}
+.container{
+    overflow: scroll;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    
+}
 section{
     min-height: 100vh;
     padding: 0vh 5vw;
     scroll-snap-align : start;
-    background-color: black;
+    
     color: white;
 }
 img{
-    max-width: 50vw;
+    max-width: 30vw;
     
+    box-shadow:  inset 10px 5px 5px black;
 }
-.wrapper{
-    scroll-snap-type: y mandatory;
-}
+
 
 
 /* Resume section */
-.resume{
+.mySelf{
+    width: 70%;
     display: grid;
-    align-items: center;
+    grid-template-columns: auto auto;
+    align-items: center; 
+    justify-content:space-around;
+
+    font-family: 'Pacifico', cursive;
+    font-size:3vw;
+    text-align: center;
+    margin: auto;
+}
+.mySelf>img{
+    transform:rotate(-10deg);
 }
 
 
@@ -26,7 +55,7 @@ img{
 .projects>div{
     display: flex;
     align-items: center;
-    margin-top: 3vh;
+    margin-top: auto;
     
 }
 .paraRight>p{
@@ -38,12 +67,14 @@ img{
 .hidden{
     opacity: 0;
     transition: all 1s;
-    padding: 0vh 0vw;
 }
 .shown{
     opacity: 1;  
     transition: all 1s;
-    padding: 0vh 5vw;
+    
+}
+.projects{
+    padding-bottom: 10%;
 }
 
 /* Contact Page */
@@ -58,12 +89,13 @@ img{
     justify-content: center;
 }
 .playIconAnimation > svg{
-    background-color: red;
     width: 1vw;
-    border: 2px solid black;
+    
     border-radius: 50%;
+    padding: 0.7vw;
     animation-fill-mode: forwards;
     animation-duration: 1s;
+    margin-right: 3vw;
     animation-name: iconEnlargement;
     
 }
