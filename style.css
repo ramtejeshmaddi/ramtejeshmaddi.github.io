@@ -1,0 +1,111 @@
+/* Background */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top left, #0b0c10, #1f2833);
+  color: #c5c6c7;
+  overflow-x: hidden;
+}
+
+a {
+   color: #c5c6c7 ;
+   font-weight: bold;
+}
+
+/* Particle canvas */
+#particles {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  animation: gradientShift 10s ease infinite;
+  background: linear-gradient(135deg, #0b0c10, #1f2833, #0b0c10);
+  background-size: 400% 400%;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Profile Image */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #66fcf1;
+  box-shadow: 0 0 25px rgba(102, 252, 241, 0.7);
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Neon Text */
+.glow-text {
+  color: #66fcf1;
+  font-size: 3rem;
+  text-shadow: 0 0 10px #66fcf1, 0 0 20px #45a29e;
+}
+
+/* Glass Cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(102, 252, 241, 0.3);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 30px;
+  margin: 40px auto;
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: 0 0 20px rgba(102, 252, 241, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-6px) rotateX(2deg);
+  box-shadow: 0 0 30px rgba(102, 252, 241, 0.4);
+}
+
+/* Skills */
+.skills span {
+  border: 1px solid #66fcf1;
+  padding: 8px 14px;
+  border-radius: 6px;
+  background: rgba(102, 252, 241, 0.05);
+  margin: 6px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.skills span:hover {
+  background: #66fcf1;
+  color: #000;
+}
+
+/* Footer */
+.glass-footer {
+  text-align: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(102, 252, 241, 0.3);
+  backdrop-filter: blur(10px);
+  margin-top: 40px;
+}
