@@ -1,0 +1,2 @@
+Remade the portfolio website myself as the AI generated code is not mobile friendly.
+Used NextJS as the framework as it is the industry standard for webdevelopment.
