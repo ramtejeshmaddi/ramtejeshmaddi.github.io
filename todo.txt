@@ -1,0 +1,8 @@
+Tasks To Do:
+Make the title animation whenever it is visible
+change the background color of sections
+producing sounds when hovering elements
+
+
+Tasks Completed:
+Change cursor to ink cursor

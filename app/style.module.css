@@ -1,0 +1,316 @@
+
+
+body {
+    cursor: url('/cursor.svg'), default;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.titleContainer {
+    margin: 1rem;
+    padding:5vw;
+    padding-top: 0rem;  
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    background-image: linear-gradient(45deg,#1d2935, #000000 );
+}
+
+
+
+.skillZoom {
+    transition: transform 0.8s ease;
+}
+.skillZoom:hover{
+    transform: scale(1.16);
+}
+
+
+.titleContainer img {
+    align-self: center;
+    justify-self: center;
+    width: 18rem;
+    clip-path: circle(36% at 45% 40%);
+    padding-bottom: 1rem;
+    border:2px solid black;
+    position: relative;
+    top: 4.35rem;
+    left:0.54rem;
+}
+
+
+.titleContainer .imgCircle {
+    width: 15rem;
+    height: 15rem;
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    position: absolute;
+    top:5.5rem;
+    margin-right: 0.8rem;
+    align-self: center;
+    justify-self: center;
+    animation-name: imgCircleinitialFadeIn, imgCircleInitialAnimation;
+    animation-duration: 0.5s, 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.8s, 1.3s;
+}
+@keyframes imgCircleinitialFadeIn {
+    to {
+         border: 2px solid rgb(255, 255, 255);
+    }
+}
+@keyframes imgCircleInitialAnimation {
+    to {
+        width: 14rem;
+        height: 14rem;
+        top: 5.9rem;
+    }
+}
+
+@keyframes Title_Text_Animation {
+    0% {
+        text-shadow: 0em 0em 0rem;
+    }
+    25% {
+         text-shadow: 0em 0em 0.22rem;
+    }
+    50% {
+        text-shadow: 0em 0em 0rem;
+    }
+
+}
+
+.titleContainer .myName {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin: 1rem;
+    margin-top: 1.7rem;
+    animation-name: Title_Text_Animation;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}   
+.titleContainer .myName > span {
+   color: rgb(62, 180, 194);
+}
+
+.titleContainer .nameContainer {
+    position: relative;
+  
+}
+
+.titleContainer .nameTopBar {
+    border: 0.095rem solid white ;
+    justify-self: center;
+    position: absolute;
+    top: 0.5rem;
+    width: 0rem;
+    animation-name: nameTopBarAnimation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    margin-top: 0.5rem;
+}
+
+@keyframes nameTopBarAnimation {
+    from {
+        width: 0rem;
+    }
+    to {
+        width: 16rem;
+    }
+}
+
+.skills {
+    margin-top: 1.2rem;
+    margin-bottom: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 1rem;
+    column-gap: 1rem;
+        
+}
+.skills > p {
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-style: solid;
+    border-radius: 0.6rem;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.158);
+ 
+}
+
+.skills > .Seperator {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.subHeading {
+    font-size: 1.125rem;
+    text-align: center;
+}
+
+.section {
+    /*border: 1px solid rgb(150, 150, 150);*/  
+    --background-color:#4e6f95f4; 
+    background-color: rgba(255, 255, 255, 0.016);
+    border-radius: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    border-left: 3px solid rgba(255, 255, 255, 0.12);
+    border-right: 3px solid rgba(255, 255, 255, 0.12);
+    margin: 1rem;
+    color: contrast-color(var(--background-color));
+    
+}
+
+
+
+.sectionHeading {
+    font-size: 2rem;
+    font-weight: bold;
+    transition: transform 1s ease;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    justify-self: center;
+}
+.section:hover > h1 {
+    border-bottom: 1px solid white;
+}
+
+.section .sectionSubHeading {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-top: 1rem;
+}
+.section .sectionList {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.workExperience .companyContainer {
+    border-bottom: 1px solid white;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.workExperience, .aboutMe, .projects {
+    font-size: medium;
+    padding: 2rem;
+    padding-top: 0rem;
+    padding-bottom: 2rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    
+}
+.projectHeading {
+    border-bottom: 1px solid white;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+    padding-right: 2rem;
+    display: flex;
+    justify-content:space-between;
+}
+.year {
+    align-self: flex-end;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.aboutMe, .workExperience, .projects {
+    animation-name: fadeIn;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+.aboutMe, .workExperience > p {
+    text-align:justify;
+}
+
+.resumeContainer {
+    border-radius: 1rem;
+    border: 1px solid #22272c;
+    margin: 1rem;
+    overflow: auto;
+    scrollbar-width:none;
+}
+
+.NavBar{
+    position: relative;
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 0.2rem;
+    font-size: medium;
+    color: white;
+    z-index: 1;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+    row-gap: 1rem;
+}
+@media screen and (min-width:446) {
+    .NavBar{
+        justify-content: space-evenly;
+    }
+}
+
+.NavBar p {
+    border: 2px solid white/*#22272c*/;
+    padding: 0.35rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 1rem;
+    transition: transform 1s ease;
+    
+}
+
+.NavBar p:hover {
+    border-color: rgba(255, 255, 255, 0.268);
+}
+
+
+
+.NavBorderArrowLeft{
+    position: absolute;
+    border: 1rem solid #22272c;
+    border-top: 1rem solid #0a0a0a;
+    border-left: 1rem solid #0a0a0a;
+    border-bottom: 1rem solid #0a0a0a;
+    left: 0rem;
+}
+.NavBorderArrowRight{
+    position: absolute;
+    border: 1rem solid #22272c;
+    border-top: 1rem solid #0a0a0a;
+    border-right: 1rem solid #0a0a0a;
+    border-bottom: 1rem solid #0a0a0a;
+    right: 0rem;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+.zoom {
+    transition: transform 1s ease;
+    
+}
+.zoom:hover {
+    transform: scale(1.07);
+}
