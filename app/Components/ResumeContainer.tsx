@@ -9,6 +9,7 @@ import NavBar from "./NavBar";
 import AboutMe from "./AboutMe";
 import WorkExperience from "./WorkExperience";
 import Projects from "./Projects";
+import ContactMe from "./ContactMe";
 
 export default function ResumeContainer() {
   "use client"
@@ -22,7 +23,9 @@ export default function ResumeContainer() {
           //else
           displaySection=="WorkExperience".toLowerCase()?<WorkExperience></WorkExperience>:
           //else
-          displaySection=="Projects".toLowerCase()?<Projects></Projects>:null
+          displaySection=="Projects".toLowerCase()?<Projects></Projects>:
+          //else
+          displaySection=="ContactMe".toLocaleLowerCase()?<ContactMe></ContactMe>:null
         }
       </div>
 

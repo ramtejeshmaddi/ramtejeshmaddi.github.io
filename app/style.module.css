@@ -239,6 +239,27 @@ body::-webkit-scrollbar{
     text-align:justify;
 }
 
+.contactMe > div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.contactMe {
+    margin: 2rem;
+    --borderColor:#22272c;
+    border: 2px solid var(--borderColor);
+    border-radius: 1rem;
+}
+
+
+
+.contactMeHeadings {
+    font-size:xx-large;
+}
+
 .resumeContainer {
     border-radius: 1rem;
     border: 1px solid #22272c;
@@ -259,7 +280,8 @@ body::-webkit-scrollbar{
     color: white;
     z-index: 1;
     flex-wrap: wrap;
-    justify-content:space-between;
+    justify-content:center;
+    column-gap: 1rem;
     align-items: center;
     row-gap: 1rem;
 }
@@ -277,10 +299,6 @@ body::-webkit-scrollbar{
     border-radius: 1rem;
     transition: transform 1s ease;
     
-}
-
-.NavBar p:hover {
-    border-color: rgba(255, 255, 255, 0.268);
 }
 
 
@@ -314,3 +332,4 @@ html{
 .zoom:hover {
     transform: scale(1.07);
 }
+

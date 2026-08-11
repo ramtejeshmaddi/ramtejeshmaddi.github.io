@@ -1,6 +1,7 @@
 "use client";
 
 import style from '@/app/style.module.css'
+import { color, hover } from 'motion';
 import { Winky_Rough } from 'next/font/google';
 import React, { use, useState } from "react";
 
@@ -8,52 +9,113 @@ type props = {
   setDisplaySection:React.Dispatch<React.SetStateAction<string>>
 }
 
-const winkyRough = Winky_Rough()
+
 export default function NavBar(props:props){
 
-  let navColorSets = {
-    aboutMe : ['rgb(62, 180, 194)', 'white', 'white'],
-    workExperience : ['white', 'rgb(62, 180, 194)', 'white'],
-    projects : ['white', 'white', 'rgb(62, 180, 194)']
-  }
-  
-  const [ColorSets, updateColorSet] = useState(['White', 'white', 'white'])
+  let highLightColor = 'rgb(62, 180, 194)'
+  const [navClick, changeNavClick] = useState("None")
+  const [navHover, changeNavHover] = useState('none')
 
-  console.log(ColorSets)
 
   return(
     <div className={`${style.NavBar}`}>
       <p 
         onClick={() => {
-          updateColorSet(navColorSets.aboutMe)
           props.setDisplaySection("AboutMe".toLowerCase())
+          changeNavClick("aboutMe")
         }} 
+        onMouseEnter={ 
+          () => changeNavHover('aboutMe')
+        }
+        onMouseLeave={ () => changeNavHover('none') }
         style={{
-          color:ColorSets[0],
-          borderColor:ColorSets[0],
+
+          color: 
+            navClick=="aboutMe"?
+              highLightColor:
+            navHover=='aboutMe'?
+              '#ffffff44': 'white',
+          borderColor:
+            navClick=="aboutMe"?
+              highLightColor:
+            navHover=='aboutMe'?
+              '#ffffff44': 'white',
           transform:
-            ColorSets[0]=='rgb(62, 180, 194)'?'scale(1.1)':'scale(1)'
+            navClick=="aboutMe"?'scale(1.1)':'scale(1)'
           }}>
             About Me
       </p>
 
       <p
         onClick={() => {
-          updateColorSet(navColorSets.projects)
           props.setDisplaySection("Projects".toLowerCase())
+          changeNavClick("projects")
         }} 
-        style={{color:ColorSets[2], borderColor:ColorSets[2], transform:ColorSets[2]=='rgb(62, 180, 194)'?'scale(1.1)':'scale(1)'}}
+        onMouseEnter={ () => changeNavHover('projects') }
+        onMouseLeave={ () => changeNavHover('none') }
+        style={{
+
+          color: 
+            navClick=="projects"?
+              highLightColor:
+            navHover=='projects'?
+              '#ffffff44': 'white',
+          borderColor:
+            navClick=="projects"?
+              highLightColor:
+            navHover=='projects'?
+              '#ffffff44': 'white',
+          transform:navClick=="projects"?'scale(1.1)':'scale(1)'
+        }}
         >
           Projects
       </p>
       <p
         onClick={() => {
-          updateColorSet(navColorSets.workExperience)
           props.setDisplaySection("WorkExperience".toLowerCase())
+          changeNavClick("experience")
         }} 
-        style={{color:ColorSets[1],borderColor:ColorSets[1] ,transform:ColorSets[1]=='rgb(62, 180, 194)'?'scale(1.1)':'scale(1)' }}
+        onMouseEnter={ () => changeNavHover('experience') }
+        onMouseLeave={ () => changeNavHover('none') }
+        style={{
+          
+          color: 
+            navClick=="experience"?
+              highLightColor:
+            navHover=='experience'?
+              '#ffffff44': 'white',
+          borderColor:
+            navClick=="experience"?
+              highLightColor:
+            navHover=='experience'?
+              '#ffffff44': 'white',
+          transform:navClick=="experience"?'scale(1.1)':'scale(1)'
+        }}
         >
           Experience
+      </p>
+      <p
+        onClick={() => {
+          props.setDisplaySection("ContactMe".toLowerCase())
+          changeNavClick("contactMe")
+        }} 
+        onMouseEnter={ () => changeNavHover('contactMe') }
+        onMouseLeave={ () => changeNavHover('none') }
+        style={{
+          color: 
+            navClick=="contactMe"?
+              highLightColor:
+            navHover=='contactMe'?
+              '#ffffff44': 'white',
+          borderColor:
+            navClick=="contactMe"?
+              highLightColor:
+            navHover=='contactMe'?
+              '#ffffff44': 'white',
+          transform:navClick=="contactMe"?'scale(1.1)':'scale(1)'
+        }}
+        >
+          Contact Me
       </p>
 
     </div>
