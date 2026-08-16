@@ -13,6 +13,8 @@ type props = {
 export default function NavBar(props:props){
 
   let highLightColor = 'rgb(62, 180, 194)'
+  let hoverColor = 'white'
+  let normalColor = '#ffffffdc'
   const [navClick, changeNavClick] = useState("None")
   const [navHover, changeNavHover] = useState('none')
 
@@ -34,12 +36,12 @@ export default function NavBar(props:props){
             navClick=="aboutMe"?
               highLightColor:
             navHover=='aboutMe'?
-              '#ffffff44': 'white',
+              hoverColor: normalColor,
           borderColor:
             navClick=="aboutMe"?
               highLightColor:
             navHover=='aboutMe'?
-              '#ffffff44': 'white',
+              hoverColor: normalColor,
           transform:
             navClick=="aboutMe"?'scale(1.1)':'scale(1)'
           }}>
@@ -59,12 +61,12 @@ export default function NavBar(props:props){
             navClick=="projects"?
               highLightColor:
             navHover=='projects'?
-              '#ffffff44': 'white',
+              hoverColor: normalColor,
           borderColor:
             navClick=="projects"?
               highLightColor:
             navHover=='projects'?
-              '#ffffff44': 'white',
+              hoverColor: normalColor,
           transform:navClick=="projects"?'scale(1.1)':'scale(1)'
         }}
         >
@@ -83,12 +85,12 @@ export default function NavBar(props:props){
             navClick=="experience"?
               highLightColor:
             navHover=='experience'?
-              '#ffffff44': 'white',
+              hoverColor: normalColor,
           borderColor:
             navClick=="experience"?
               highLightColor:
             navHover=='experience'?
-              '#ffffff44': 'white',
+              hoverColor: normalColor,
           transform:navClick=="experience"?'scale(1.1)':'scale(1)'
         }}
         >
@@ -106,12 +108,12 @@ export default function NavBar(props:props){
             navClick=="contactMe"?
               highLightColor:
             navHover=='contactMe'?
-              '#ffffff44': 'white',
+              hoverColor: normalColor,
           borderColor:
             navClick=="contactMe"?
               highLightColor:
             navHover=='contactMe'?
-              '#ffffff44': 'white',
+              hoverColor: normalColor,
           transform:navClick=="contactMe"?'scale(1.1)':'scale(1)'
         }}
         >

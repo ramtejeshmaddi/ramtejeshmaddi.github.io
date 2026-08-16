@@ -176,9 +176,7 @@ body::-webkit-scrollbar{
     padding-top: 1rem;
     justify-self: center;
 }
-.section:hover > h1 {
-    border-bottom: 1px solid white;
-}
+
 
 .section .sectionSubHeading {
     font-size: 1.5rem;
@@ -199,7 +197,7 @@ body::-webkit-scrollbar{
 }
 
 
-.workExperience, .aboutMe, .projects {
+.workExperience, .aboutMe, .projects{
     font-size: medium;
     padding: 2rem;
     padding-top: 0rem;
@@ -229,7 +227,7 @@ body::-webkit-scrollbar{
     }
 }
 
-.aboutMe, .workExperience, .projects {
+.aboutMe, .workExperience, .projects, .fadeIn {
     animation-name: fadeIn;
     animation-duration: 3s;
     animation-fill-mode: forwards;
@@ -292,7 +290,7 @@ body::-webkit-scrollbar{
 }
 
 .NavBar p {
-    border: 2px solid white/*#22272c*/;
+    border: 2px solid #ffffffb6;
     padding: 0.35rem;
     padding-left: 1rem;
     padding-right: 1rem;
