@@ -99,10 +99,11 @@ function ProjectsNavBar(props:props){
 function FullStack(){
   return(
       <div>
+
         {/* Project 1 */}
         <div className={style.fadeIn}>
           <div className={`${style.projectHeading} ${style.sectionSubHeading} ${winkyRough.className}`}>
-            <p> Academic Research Database </p>  
+            <p> Academic Research Publishing Website </p>  
           </div> 
           <ol>
               <li>• Built a full‑stack academic publishing platform using React Native, Python, and Supabase, enabling students 
@@ -120,6 +121,9 @@ function FullStack(){
               growing catalog sizes. </li>
           </ol>
         </div>
+        {/**Project 2 */}
+
+
       </div>
   )
 }
